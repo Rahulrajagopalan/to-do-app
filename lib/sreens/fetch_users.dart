@@ -1,11 +1,16 @@
 class User {
+
+  // variables
+
   final String name;
   final int age;
   final String email;
 
+  // contructor
+
   User({required this.name, required this.age, required this.email});
 
-  // Factory constructor to create a User from a map (e.g., JSON)
+  // json maping
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
       name: json['name'],
@@ -14,7 +19,8 @@ class User {
     );
   }
 
-  // Method to convert a User object to a map
+  // to json
+
   Map<String, dynamic> toJson() {
     return {
       'name': name,
